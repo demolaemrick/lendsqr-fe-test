@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../assets/images/logo.svg';
 import './Login.scss';
 
 const Login = () => {
@@ -18,8 +19,7 @@ const Login = () => {
     <div className="login-page">
       <div className="login-page__left">
         <div className="login-page__logo">
-          <img src="/union.svg" alt="Lendsqr" />
-          <span className="login-page__logo-text">lendsqr</span>
+          <img src={logo} alt="Lendsqr" />
         </div>
         <div className="login-page__illustration">
           <img src="/pablo-sign-in.svg" alt="Welcome illustration" />
