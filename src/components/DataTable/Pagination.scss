@@ -1,0 +1,110 @@
+@import '../../styles/variables';
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: $font-family;
+    font-size: 14px;
+    color: $secondary-color;
+  }
+
+  &__select {
+    height: 30px;
+    padding: 0 30px 0 10px;
+    border: none;
+    border-radius: $border-radius-sm;
+    background-color: rgba($primary-dark, 0.1);
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 700;
+    color: $primary-dark;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41 0.590088L6 5.17009L10.59 0.590088L12 2.00009L6 8.00009L0 2.00009L1.41 0.590088Z' fill='%23213F7D'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__pages {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 24px;
+    border-radius: $border-radius-sm;
+    background-color: rgba($primary-dark, 0.1);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover:not(:disabled) {
+      background-color: rgba($primary-dark, 0.2);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    svg {
+      fill: $primary-dark;
+    }
+
+    &--prev svg {
+      transform: rotate(90deg);
+    }
+
+    &--next svg {
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__page {
+    min-width: 24px;
+    height: 24px;
+    padding: 0 6px;
+    border: none;
+    background: none;
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba($primary-dark, 0.6);
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $primary-dark;
+    }
+
+    &--active {
+      font-weight: 500;
+      color: $primary-dark;
+    }
+  }
+
+  &__ellipsis {
+    font-family: $font-family;
+    font-size: 16px;
+    color: rgba($primary-dark, 0.6);
+    padding: 0 4px;
+  }
+}

@@ -1,0 +1,234 @@
+@import '../../styles/variables';
+
+.data-table {
+  background-color: $background-white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-sm;
+  box-shadow: $card-shadow;
+  overflow: hidden;
+
+  &__wrapper {
+    overflow-x: auto;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px;
+  }
+
+  &__header {
+    background-color: $background-white;
+
+    th {
+      padding: 16px 20px;
+      text-align: left;
+      font-family: $font-family;
+      font-size: 12px;
+      font-weight: 600;
+      color: $secondary-color;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid $border-color;
+      white-space: nowrap;
+    }
+  }
+
+  &__header-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      color: $primary-dark;
+    }
+  }
+
+  &__filter-icon {
+    flex-shrink: 0;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__body {
+    tr {
+      border-bottom: 1px solid $border-color;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background-color: rgba($primary-color, 0.02);
+      }
+    }
+
+    td {
+      padding: 16px 20px;
+      font-family: $font-family;
+      font-size: 14px;
+      color: $secondary-color;
+      vertical-align: middle;
+    }
+  }
+
+  &__actions {
+    position: relative;
+  }
+
+  &__actions-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: rgba($primary-color, 0.1);
+    }
+
+    svg {
+      fill: $secondary-color;
+    }
+  }
+
+  &__actions-menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: $background-white;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-sm;
+    box-shadow: $dropdown-shadow;
+    min-width: 180px;
+    z-index: 100;
+    padding: 10px 0;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      font-family: $font-family;
+      font-size: 14px;
+      color: $secondary-color;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: rgba($primary-color, 0.06);
+      }
+
+      svg {
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+// Filter Dropdown
+.filter-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background-color: $background-white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-sm;
+  box-shadow: $dropdown-shadow;
+  padding: 20px;
+  min-width: 270px;
+  z-index: 200;
+
+  &__field {
+    margin-bottom: 16px;
+  }
+
+  &__label {
+    display: block;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 500;
+    color: $secondary-color;
+    margin-bottom: 8px;
+  }
+
+  &__input,
+  &__select {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-sm;
+    font-family: $font-family;
+    font-size: 14px;
+    color: $text-color;
+    background-color: $background-white;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+    }
+
+    &::placeholder {
+      color: $secondary-color;
+      opacity: 0.6;
+    }
+  }
+
+  &__select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41 0.590088L6 5.17009L10.59 0.590088L12 2.00009L6 8.00009L0 2.00009L1.41 0.590088Z' fill='%23545F7D'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  &__button {
+    flex: 1;
+    height: 40px;
+    border-radius: $border-radius-sm;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &--reset {
+      background-color: $background-white;
+      border: 1px solid $secondary-color;
+      color: $secondary-color;
+
+      &:hover {
+        border-color: $primary-dark;
+        color: $primary-dark;
+      }
+    }
+
+    &--filter {
+      background-color: $primary-color;
+      border: none;
+      color: $background-white;
+
+      &:hover {
+        background-color: darken($primary-color, 5%);
+      }
+    }
+  }
+}

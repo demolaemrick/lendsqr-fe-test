@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+
+.stat-card {
+  background-color: $background-white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-sm;
+  padding: 20px 30px;
+  box-shadow: $card-shadow;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+
+    &--pink {
+      background-color: $stat-pink-bg;
+
+      svg path {
+        fill: $stat-pink;
+      }
+    }
+
+    &--purple {
+      background-color: $stat-purple-bg;
+
+      svg path {
+        fill: $stat-purple;
+      }
+    }
+
+    &--orange {
+      background-color: $stat-orange-bg;
+
+      svg path {
+        fill: $stat-orange;
+      }
+    }
+
+    &--red {
+      background-color: $stat-red-bg;
+
+      svg path {
+        fill: $stat-red;
+      }
+    }
+  }
+
+  &__label {
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 500;
+    color: $secondary-color;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+
+  &__value {
+    font-family: $font-family;
+    font-size: 24px;
+    font-weight: 600;
+    color: $primary-dark;
+  }
+}

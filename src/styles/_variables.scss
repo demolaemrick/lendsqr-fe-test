@@ -1,0 +1,47 @@
+// Color Palette
+$primary-color: #39cdcc;
+$primary-dark: #213f7d;
+$secondary-color: #545f7d;
+$text-color: #545f7d;
+$text-dark: #213f7d;
+$text-primary: #213f7d;
+$text-secondary: #545f7d;
+$border-color: #545f7d26;
+$background-light: #fbfbfb;
+$background-white: #ffffff;
+
+// Status Colors
+$status-active: #39cd62;
+$status-active-bg: rgba(57, 205, 98, 0.06);
+$status-inactive: #545f7d;
+$status-inactive-bg: rgba(84, 95, 125, 0.06);
+$status-pending: #e9b200;
+$status-pending-bg: rgba(233, 178, 0, 0.1);
+$status-blacklisted: #e4033b;
+$status-blacklisted-bg: rgba(228, 3, 59, 0.1);
+
+// Stat Card Icon Colors
+$stat-pink: #df18ff;
+$stat-pink-bg: rgba(223, 24, 255, 0.1);
+$stat-purple: #5718ff;
+$stat-purple-bg: rgba(87, 24, 255, 0.1);
+$stat-orange: #f55f44;
+$stat-orange-bg: rgba(245, 95, 68, 0.1);
+$stat-red: #ff3366;
+$stat-red-bg: rgba(255, 51, 102, 0.1);
+
+// Spacing
+$sidebar-width: 283px;
+$header-height: 100px;
+
+// Shadows
+$shadow-sm: 0px 2px 10px rgba(0, 0, 0, 0.04);
+$card-shadow: 0px 2px 10px rgba(0, 0, 0, 0.04);
+$dropdown-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
+// Border Radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+
+// Fonts
+$font-family: 'Work Sans', system-ui, sans-serif;

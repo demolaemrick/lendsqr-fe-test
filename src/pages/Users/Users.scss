@@ -1,0 +1,45 @@
+@import '../../styles/variables';
+
+.users-page {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+
+  &__title {
+    font-family: $font-family;
+    font-size: 24px;
+    font-weight: 500;
+    color: $primary-dark;
+    margin-bottom: 40px;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+    margin-bottom: 40px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__table-container {
+    margin-bottom: 20px;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+
+  &__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    font-size: 16px;
+    color: $text-secondary;
+  }
+}

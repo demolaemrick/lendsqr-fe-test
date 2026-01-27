@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: $background-light;
+
+  &__sidebar {
+    position: fixed;
+    left: 0;
+    top: $header-height;
+    width: $sidebar-width;
+    height: calc(100vh - #{$header-height});
+    background-color: $background-white;
+    border-right: 1px solid $border-color;
+    overflow-y: auto;
+    z-index: 100;
+  }
+
+  &__main {
+    margin-left: $sidebar-width;
+    margin-top: $header-height;
+    flex: 1;
+    padding: 60px 60px 40px;
+    min-height: calc(100vh - #{$header-height});
+    max-width: calc(100vw - #{$sidebar-width});
+    overflow-x: hidden;
+
+    @media (max-width: 1200px) {
+      padding: 40px 30px;
+    }
+  }
+}
