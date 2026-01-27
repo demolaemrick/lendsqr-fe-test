@@ -91,10 +91,10 @@ src/
 
 ```bash
 # Clone the repository
-git clone https://github.com/demolaemrick/lendsqr-assessment.git
+git clone https://github.com/demolaemrick/lendsqr-fe-test.git
 
 # Navigate to project directory
-cd lendsqr-assessment
+cd lendsqr-fe-test
 
 # Install dependencies
 pnpm install
