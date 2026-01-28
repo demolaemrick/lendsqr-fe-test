@@ -1,4 +1,5 @@
-@import '../../styles/variables';
+@use 'sass:color';
+@use '../../styles/variables' as *;
 
 $mobile-breakpoint: 768px;
 
@@ -121,7 +122,7 @@ $mobile-breakpoint: 768px;
       transition: background-color 0.2s ease;
 
       &:hover {
-        background-color: darken($primary-color, 5%);
+        background-color: color.adjust($primary-color, $lightness: -5%);
       }
 
       svg {
